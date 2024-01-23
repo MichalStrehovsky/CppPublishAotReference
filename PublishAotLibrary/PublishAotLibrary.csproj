@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>net8.0</TargetFramework>
     <InvariantGlobalization>true</InvariantGlobalization>
-	<PublishAot>true</PublishAot>
+    <PublishAot>true</PublishAot>
   </PropertyGroup>
 
 </Project>

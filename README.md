@@ -27,8 +27,12 @@ The important bit in the vcxproj is this:
 	
   <Target Name="BuildNativeAotProject">
     <MSBuild Projects="@(NativeAotProjectReference)"
+             Properties="RuntimeIdentifier=win-$(Platform)"
+             Targets="Restore" />
+
+    <MSBuild Projects="@(NativeAotProjectReference)"
              Properties="_IsPublishing=true;RuntimeIdentifier=win-$(Platform)"
-             Targets="Restore;Build;Publish">
+             Targets="Build;Publish">
       <Output TaskParameter="TargetOutputs" ItemName="NativeAotProjectOutputs" />
     </MSBuild>
 
