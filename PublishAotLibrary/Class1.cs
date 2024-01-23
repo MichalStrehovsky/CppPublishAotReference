@@ -5,6 +5,6 @@ namespace PublishAotLibrary
     public class Class1
     {
         [UnmanagedCallersOnly(EntryPoint = "ManagedAdd")]
-        public static int ManagedAdd(int x, int y) => x - y;
+        public static int ManagedAdd(int x, int y) => x + y;
     }
 }
