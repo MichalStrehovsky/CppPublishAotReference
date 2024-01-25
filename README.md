@@ -1,9 +1,5 @@
 # Sample of a C++ project referencing a Native AOT compiled DLL
 
-Known issues:
-
-* When building in Visual Studio, no rebuild of the managed portion happens for some reason
-
 ## Building from command line
 
 ```
@@ -14,6 +10,10 @@ msbuild CppApplication.vcxproj
 The important bit in the vcxproj is this:
 
 ```xml
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+
   <ItemGroup>
     <NativeAotProjectReference Include="../PublishAotLibrary/PublishAotLibrary.csproj" />
   </ItemGroup>

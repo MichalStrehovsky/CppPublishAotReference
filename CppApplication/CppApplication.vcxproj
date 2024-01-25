@@ -130,6 +130,10 @@
     <ClCompile Include="CppApplication.cpp" />
   </ItemGroup>
 
+  <PropertyGroup>
+    <DisableFastUpToDateCheck>true</DisableFastUpToDateCheck>
+  </PropertyGroup>
+	
   <ItemGroup>
     <NativeAotProjectReference Include="../PublishAotLibrary/PublishAotLibrary.csproj" />
   </ItemGroup>
